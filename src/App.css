@@ -1,38 +1,202 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --blueColor: #0049ae;
+  --orangeColor: #db7912;
+  --textColor: #052f57;
+}
+.swiper {
+  width: 100vw;
+  height: 100vh;
+}
+
+p {
+  color: var(--textColor);
+}
+
+.main-page {
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 73, 174, 0.15) 0%,
+    rgba(0, 73, 174, 0) 48.75%,
+    rgba(0, 73, 174, 0.15) 96.15%
+  );
+}
+
+.main-page .main-page-wrapper {
+  height: 100%;
+  align-items: center;
+}
+
+.main-page .main-page-wrapper .left {
+  text-align: center;
+}
+.main-page .main-page-wrapper .right {
+  border-left: 1px solid var(--textColor);
+}
+
+.main-page h2 {
+  font-weight: bold;
+  color: var(--orangeColor);
+  margin: 0;
+}
+
+.main-page h2 span {
+  color: var(--blueColor);
+}
+
+.main-page .logo {
+  height: 150px;
+}
+
+.main-page .pic {
+  height: 30px;
+  margin: 2rem 0.5rem 0 0.5rem;
+}
+
+.main-page h1 {
+  font-weight: bold;
+  color: var(--orangeColor);
+  margin: 0;
+  font-size: 45px;
+}
+
+.main-page h1 span {
+  color: var(--blueColor);
+}
+.main-page .right {
+  padding: 0 5rem;
+}
+.main-page .right p {
+  line-height: 33px;
+  text-align: justify;
+}
+.swiper-pagination-bullet {
+  border-radius: 0;
+  transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.swiper-pagination-bullet-active {
+  background: var(--blueColor);
+  transform: rotate(-180deg);
+}
+.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 1rem 0.5rem;
+}
+
+.feature-page {
+  height: 100vh;
+  background: #f4f6fc;
+}
+
+.feature-page .feature-page-wrapper {
+  height: 100%;
+  align-items: center;
+}
+.feature-page .feature-page-wrapper .left,
+.feature-page .feature-page-wrapper .right {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.feature-page .feature-page-wrapper .right {
+  padding: 0 15rem 0 40px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.feature-page .feature-page-wrapper .right h3 {
+  color: var(--blueColor);
+  margin-top: 0.5rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.feature-page .feature-page-wrapper .right h3 span {
+  color: var(--orangeColor);
+  font-weight: bold;
 }
-
-.App-link {
-  color: #61dafb;
+.feature-page .feature-page-wrapper .right .icon {
+  animation: icon 2s infinite alternate-reverse ease-in-out;
+  height: 50px;
 }
-
-@keyframes App-logo-spin {
+@keyframes icon {
   from {
-    transform: rotate(0deg);
+    transform: scale(0.9);
   }
   to {
-    transform: rotate(360deg);
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 1500.9px) {
+  .feature-page .feature-page-wrapper .right {
+    padding: 0 8rem 0 40px;
+  }
+}
+@media (max-width: 1100.9px) {
+  .feature-page .feature-page-wrapper .right {
+    padding: 0 80px 0 40px;
+  }
+}
+
+@media (max-width: 639.9px) {
+  .feature-page .feature-page-wrapper {
+    align-items: flex-start;
+  }
+  .feature-page .feature-page-wrapper .left {
+    margin-top: 3rem;
+  }
+  .feature-page .feature-page-wrapper .right {
+    padding: 0 !important;
+  }
+}
+@media (max-width: 959.9px) {
+  .main-page .logo {
+    height: 100px;
+    margin-top: 0.5rem;
+  }
+  .main-page h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .main-page .pic {
+    margin: 0 0.5rem;
+  }
+  .main-page h1 {
+    font-size: 22px;
+  }
+  .main-page .left .footer {
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+  }
+  .main-page .right {
+    margin-top: 0;
+  }
+  .main-page .right .quick-links {
+    margin-top: 0 !important;
+  }
+  .main-page .right p {
+    line-height: 27px;
+    margin-top: 0.5rem;
+  }
+  .feature-page .feature-page-wrapper .left img {
+    height: 290px;
+    padding-left: 1rem;
+  }
+  .feature-page .feature-page-wrapper .right h3 {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+  }
+  .feature-page .feature-page-wrapper .right .icon {
+    height: 30px;
+  }
+  .feature-page .feature-page-wrapper .right p {
+    margin-top: 0;
+  }
+  .feature-page .feature-page-wrapper .right {
+    padding: 0 60px 0 30px;
   }
 }
